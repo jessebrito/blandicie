@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Blandicie - Cartão Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fdf8f5', // Fundo creme claro
+                            accent: '#8b5a2b', // Marrom caramelo
+                            dark: '#3e2723',   // Marrom chocolate escuro
+                            hover: '#2d1b18'   // Marrom mais escuro para hover
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body {
+            background-color: #fdf8f5;
+            background-image: radial-gradient(#e6d5c9 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 text-brand-dark">
+
+    <main class="w-full max-w-sm bg-white rounded-3xl shadow-xl overflow-hidden border border-brand-light">
+        
+        <!-- Header / Capa -->
+        <div class="h-32 bg-brand-dark relative flex justify-center">
+            <!-- Substitua o src abaixo pela logo da A Blandicie -->
+            <img src="logo.png" alt="Logo A Blandicie" 
+                 class="w-28 h-28 rounded-full border-4 border-white absolute -bottom-14 shadow-md object-cover bg-brand-light">
+        </div>
+
+        <!-- Infos -->
+        <div class="pt-16 pb-8 px-6 text-center mt-2">
+            <h1 class="text-2xl font-serif font-bold text-brand-dark mb-1">A Blandicie</h1>
+            <p class="text-sm text-brand-accent font-medium mb-4">Brownies Artesanais • Jundiaí, SP</p>
+            <p class="text-brand-dark/80 text-sm mb-8 leading-relaxed">
+                Transformando momentos com o verdadeiro sabor do chocolate. Peça já o seu!
+            </p>
+
+            <!-- Botões de Link -->
+            <div class="flex flex-col gap-4">
+                
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5511981610188?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20brownies." 
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#1EBE57] text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Fazer uma Encomenda
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/blandicie" 
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-center justify-center gap-3 w-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F56040] hover:opacity-90 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    Acompanhe no Instagram
+                </a>
+
+                <!-- Link Extra Opcional (Cardápio) -->
+                <a href="#" 
+                   class="group flex items-center justify-center gap-3 w-full bg-brand-dark hover:bg-brand-hover text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+                    <i class="fa-solid fa-utensils text-lg"></i>
+                    Ver Cardápio Completo
+                </a>
+                
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-brand-light/50 text-center py-4 text-xs text-brand-dark/60 font-medium">
+            Feito com <i class="fa-solid fa-heart text-brand-accent"></i> pela família
+        </div>
+    </main>
+
+</body>
+</html>
